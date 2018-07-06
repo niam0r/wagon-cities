@@ -12,11 +12,11 @@ class CityList extends Component {
 
   render() {
     return (
-      <div className="cities">
+      <ul className="list-group cities">
         {this.props.cities.map(city => {
           return <City city={city} key={city.name} />
         })}
-      </div>
+      </ul>
     );
   }
 }

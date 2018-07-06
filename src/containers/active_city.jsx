@@ -2,15 +2,16 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 const ActiveCity = (props) => {
-  if (!props.activeCity) {
+  if (!props.selectedCity) {
     return (
       <div className="active-city">
         <p>Select a city...</p>
       </div>
     );
   }
+  // debugger
+  const { name, address, slug } = props.selectedCity;
 
-  const { name, address, slug } = props.city;
   return (
     <div className="active-city">
       <h3>{name}</h3>
@@ -24,10 +25,6 @@ function mapStateToProps(state) {
   return {
     selectedCity: state.selectedCity
   };
-}
-
-function mapDispatchToProps(dispatch) {
-  return bindActionCreators({ set }, dispatch);
 }
 
 export default connect(mapStateToProps)(ActiveCity);
