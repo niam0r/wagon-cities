@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 
 class City extends Component {
-  // active-city
   render() {
     return (
       <div className="list-group-item">
