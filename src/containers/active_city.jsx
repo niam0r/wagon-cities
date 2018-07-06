@@ -16,7 +16,11 @@ const ActiveCity = (props) => {
     <div className="active-city">
       <h3>{name}</h3>
       <p>{address}</p>
-      <img src={`https://kitt.lewagon.com/placeholder/cities/${slug}`} alt="" />
+      <img
+        src={`https://kitt.lewagon.com/placeholder/cities/${slug}`}
+        alt={name}
+        width="100%"
+      />
     </div>
   );
 };
