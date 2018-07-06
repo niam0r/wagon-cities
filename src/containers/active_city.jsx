@@ -4,11 +4,17 @@ const ActiveCity = (props) => {
   const { name, address, slug } = props.city;
   return (
     <div className="active-city">
-      <h1>{name}</h1>
+      <h3>{name}</h3>
       <p>{address}</p>
       <img src={`https://kitt.lewagon.com/placeholder/cities/${slug}`} alt=""/>
     </div>
   );
 };
 
-export default ActiveCity;
+function mapStateToProps(state) {
+  return {
+    activeCity: state.activeCity
+  };
+}
+
+export default connect(mapStateToProps)(ActiveCity);
